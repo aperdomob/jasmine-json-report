@@ -68,8 +68,8 @@ class JsonReport {
       jasmineDone: () => {
         removeParent(jsonResult);
 
-        const reportPath = properties.path ? properties.path : 'json';
-        const fileName = properties.fileName ? properties.fileName : 'result.json';
+        const reportPath = properties && properties.path ? properties.path : 'report/json';
+        const fileName = properties && properties.fileName ? properties.fileName : 'result.json';
 
         createFolderStructure(reportPath);
         saveFile(reportPath, fileName, jsonResult);
