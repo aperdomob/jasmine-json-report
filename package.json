@@ -5,7 +5,7 @@
   "main": "./src/index.js",
   "scripts": {
     "lint": "eslint **/*.js",
-    "test": "npm run lint && node index.js",
+    "test": "npm run lint && node src/index.js",
     "preversion": "npm test",
     "postversion": "git push origin HEAD && git push origin $(git describe --tags) && npm publish"
   },
