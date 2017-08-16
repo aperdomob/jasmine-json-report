@@ -1,0 +1,32 @@
+{
+  "name": "jasmine-json-report",
+  "version": "0.0.0",
+  "description": "A Simple Jasmine Report",
+  "main": "./src/index.js",
+  "scripts": {
+    "lint": "eslint **/*.js",
+    "test": "npm run lint && node index.js",
+    "preversion": "npm test",
+    "postversion": "git push origin HEAD && git push origin $(git describe --tags) && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aperdomob/jasmine-json-report.git"
+  },
+  "keywords": [
+    "jasmine",
+    "JSON",
+    "report"
+  ],
+  "author": "aperdomobo@gmail.com (aperdomob)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aperdomob/jasmine-json-report/issues"
+  },
+  "homepage": "https://github.com/aperdomob/jasmine-json-report#readme",
+  "devDependencies": {
+    "eslint": "^4.4.1",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-plugin-import": "^2.7.0"
+  }
+}
