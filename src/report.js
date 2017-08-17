@@ -47,11 +47,9 @@ class JsonReport {
         current = jsonResult;
       },
       suiteStarted: (suite) => {
-        const node = {
-          description: suite.description,
-          children: [],
-          parent: current
-        };
+        const node = Object.assign({}, suite);
+        node.children = [];
+        node.parent = current;
 
         current.children.push(node);
         current = node;
