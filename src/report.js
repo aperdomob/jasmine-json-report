@@ -6,7 +6,7 @@ const createFolderStructure = (fullPath) => {
 
   let currentPath = '';
 
-  paths.forEach(part => {
+  paths.forEach((part) => {
     currentPath = path.join(currentPath, part);
 
     if (!fs.existsSync(currentPath)) {
@@ -27,10 +27,7 @@ const removeParent = (tree) => {
 };
 
 const saveFile = (fullPath, fileName, json) => {
-  fs.writeFileSync(
-    path.join(fullPath, fileName),
-    JSON.stringify(json)
-  );
+  fs.writeFileSync(path.join(fullPath, fileName), JSON.stringify(json));
 };
 
 class JsonReport {

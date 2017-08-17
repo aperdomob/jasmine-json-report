@@ -3,6 +3,8 @@ env:
   node: true
 extends:
   - eslint:recommended
-  - airbnb-base/legacy
+  - airbnb-base
   - plugin:import/errors
   - plugin:import/warnings
+rules:
+  "comma-dangle": ["error", "never"]
